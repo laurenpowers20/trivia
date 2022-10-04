@@ -8,12 +8,22 @@
   <title>Trivia</title>
 </head>
 <body>
-<div class="intro">
+<div class="title">
     <h1>Trivia</h1>
-      <button class="start-button">Get Started!</button>
 </div>
-  <div class="game-container">
-  </div>
+
+  <div id="question-container" class="hide">
+      <div id="choices-buttons" class="choices-grid">
+          <button class="answer-button">Answer 1</button>
+          <button class="answer-button">Answer 2</button>
+          <button class="answer-button">Answer 3</button>
+          <button class="answer-button">Answer 4</button>
+      </div>
+</div>
+<div class="start-next-buttons">
+    <button id="start-button" class="start-button button">Start</button>
+    <button id="next-button" class="next-button button hide">Next</button>
+</div>
 
  
   <script src="script.js"></script>
