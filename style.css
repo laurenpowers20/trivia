@@ -10,12 +10,6 @@ img {
   border: solid 2px black;
 }
 
-
-#question-container.hide {
-  background-color: blue;
-  
-}
-
 .hide {
   display: none;
 }

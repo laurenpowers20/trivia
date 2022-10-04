@@ -2,8 +2,15 @@ let startButton = document.querySelector("#start-button");
 let questionContainer = document.querySelector("#question-container");
 let nextButton = document.querySelector("#next-button");
 let gameQuestionText = document.getElementById("question-text");
+let answerButton = document.querySelectorAll(".answer-button");
+let answerMessage = document.querySelector(".answer-message");
+let scoreText = document.querySelector(".score");
+let score = 0;
 
 startButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", newQuestion);
+
+let index = -1;
 
 function startGame() {
   questionContainer.classList.remove("hide");
@@ -13,11 +20,56 @@ function startGame() {
 }
 
 function newQuestion() {
-  gameQuestionText.innerText = triviaQuestions[0].question;
+  index++;
+  // Add question
+  gameQuestionText.innerText = triviaQuestions[index].question;
+  // Add choices
+  let choiceA = document.querySelector(".A");
+  let choiceB = document.querySelector(".B");
+  let choiceC = document.querySelector(".C");
+  let choiceD = document.querySelector(".D");
+
+  choiceA.innerText = triviaQuestions[index].answers[0].text;
+  choiceB.innerText = triviaQuestions[index].answers[1].text;
+  choiceC.innerText = triviaQuestions[index].answers[2].text;
+  choiceD.innerText = triviaQuestions[index].answers[3].text;
+
+  choiceA.addEventListener("click", (e) =>
+    checkAnswer(e, triviaQuestions[index])
+  );
+  choiceB.addEventListener("click", (e) =>
+    checkAnswer(e, triviaQuestions[index])
+  );
+  choiceC.addEventListener("click", (e) =>
+    checkAnswer(e, triviaQuestions[index])
+  );
+  choiceD.addEventListener("click", (e) =>
+    checkAnswer(e, triviaQuestions[index])
+  );
+  answerMessage.innerText = " ";
 }
 
-// 1. Player enters game by clicking on start button
-// 2. Open a new div with question and choices. An image above appears adjacent to questions.
+function getScore() {}
+
+function checkAnswer(e, questionBlock) {
+  //console.log(e.target.innerText);
+  console.log(questionBlock);
+  let userChoice = questionBlock.answers.find((question) => {
+    return question.text === e.target.innerText;
+  });
+
+  if (userChoice.correct) {
+    score += 10;
+    answerMessage.innerText = "Yay! You got it right!";
+    scoreText.innerText = score;
+  } else {
+    answerMessage.innerText = "Sorry you're wrong :(";
+  }
+}
+
+// 1. Player enters game by clicking on start button DONE
+// 2. Open a new div with question and choices. DONE
+//populate "answers" in buttons DONE
 // 3. Once choice is made, next question populates
 // 4. Score is stored
 // 5. Percentage of score will be shown on last div visible.
@@ -30,6 +82,24 @@ const triviaQuestions = [
       { text: "Thomas Jefferson", correct: true },
       { text: "James Monroe", correct: false },
       { text: "Grover Cleveland", correct: false },
+    ],
+  },
+  {
+    question: "What is 2 + 2?",
+    answers: [
+      { text: "22", correct: false },
+      { text: "6", correct: false },
+      { text: "4", correct: true },
+      { text: "dunno", correct: false },
+    ],
+  },
+  {
+    question: "What's the biggest US State?",
+    answers: [
+      { text: "Texas", correct: false },
+      { text: "California", correct: false },
+      { text: "New York", correct: false },
+      { text: "Alaska", correct: true },
     ],
   },
 ];
