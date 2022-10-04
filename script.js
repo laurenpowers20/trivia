@@ -8,7 +8,7 @@ function newQuestion() {
   questionDiv.innerHTML = `<h3>Which president is on the $2 bill?</h3>
   <p>George Washington</p> <p>Thomas Jefferson</p><p>James Monroe</p><p>Grover Cleveland</p>`;
   document.body.append(questionDiv);
-  document.body.classList.remove("start-button");
+  document.querySelector(".intro").style.display = "none";
 }
 
 // 1. Player enters game by clicking on start button
