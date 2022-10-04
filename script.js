@@ -1,12 +1,19 @@
 let startButton = document.querySelector("#start-button");
 let questionContainer = document.querySelector("#question-container");
 let nextButton = document.querySelector("#next-button");
+let gameQuestionText = document.getElementById("question-text");
 
 startButton.addEventListener("click", startGame);
 
 function startGame() {
   questionContainer.classList.remove("hide");
   startButton.classList.add("hide");
+  nextButton.classList.remove("hide");
+  newQuestion();
+}
+
+function newQuestion() {
+  gameQuestionText.innerText = triviaQuestions[0].question;
 }
 
 // 1. Player enters game by clicking on start button
