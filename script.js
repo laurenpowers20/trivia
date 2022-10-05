@@ -5,6 +5,7 @@ let gameQuestionText = document.getElementById("question-text");
 let answerButton = document.querySelectorAll(".answer-button");
 let answerMessage = document.querySelector(".answer-message");
 let scoreText = document.querySelector(".score");
+let finalScore = document.querySelector(".final-score");
 let title = document.querySelector(".title");
 let score = 0;
 
@@ -170,20 +171,21 @@ function checkAnswer(e, questionBlock) {
 
   if (userChoice !== undefined) {
     if (userChoice.correct) {
-      // console.log(userChoice);
+      console.log(userChoice);
       score += 10;
       answerMessage.innerText = "Correct!";
-      scoreText.innerText = `Score:${score}/100`;
+      scoreText.innerText = `${score} points`;
     } else {
-      answerMessage.innerText = "Sorry, that's incorrect 🚫";
+      answerMessage.innerText = "Sorry, that's incorrect.";
     }
     index++;
-    console.log(index);
+    // console.log(index);
     if (index > 9) {
-      scoreText.innerText = `Final Score: ${score}%!`;
+      finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
+      scoreText.classList.add("hide");
     } else {
-      console.log("keep playing");
+      //console.log("keep playing");
     }
   }
 }

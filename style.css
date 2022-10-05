@@ -1,17 +1,38 @@
-body{
-  background-color: white;
-  text-align: center;
-  color: black;
-  margin: auto;
-  height: 100vh;
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+@font-face {
+  font-family: "neon-tubes-2-regular";
+  src:
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("woff"),
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("opentype"),
+    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("truetype")
+  ;
 }
 
+body{
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin: auto;
+  height: 100vh;
+  background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat;
+  background-size:cover;
+}
+
+button {
+ font-family: Arial, Helvetica, sans-serif;
+ border-radius: 10%;
+}
+
+.score {
+  text-align: right;
+  padding: 20px;
+  margin-right: 20px;
+}
 
 #game-container {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
@@ -19,7 +40,6 @@ body{
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
@@ -40,50 +60,58 @@ div {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#question-text {
+  font-size: 50px;
+  font-family: "neon-tubes-2-regular", sans-serif;
+  color: #FB4264;
+  text-shadow: 0 0 1vw #F40A35;   
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 4s ease infinite;
+  -webkit-animation: neon 4s ease infinite;
+  font-family: "neon-tubes-2-regular", sans-serif;
+}
+
 .answer-button {
   margin: 10px;
   width: 250px;
   height: 50px;
 }
 
-/*
+.final-score {
+  font-size: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+}
+
+
+
+/*
+Neon Light Effect
+Source: https://codepen.io/Trinca/pen/NrvpWa?editors=0100 
+*/
 
 :root {
-  /* Base font size */
-  /*font-size: 50px;   
-  
-  /* Set neon color */ /*
   --neon-text-color: #f40;
-  --neon-border-color: #08f;
-}
-
-body {
-  font-family: 'Exo 2', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  background: #000;
-  min-height: 100vh;
-}
-
-@font-face {
-  font-family: neon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
 h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 50px;
+}
+.title {
   color: #FB4264;
-  font-size: 9vw;
-  line-height: 9vw;
   text-shadow: 0 0 3vw #F40A35;   
   animation: neon 1s ease infinite;
   -moz-animation: neon 2s ease infinite;
   -webkit-animation: neon 2s ease infinite;
-  font-family: neon;
+  font-family: "neon-tubes-2-regular", sans-serif;
 }
-
 
 @keyframes neon {
   0%,
@@ -97,8 +125,15 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 600px) {
 
-*/
-/* https://codepen.io/Trinca/pen/NrvpWa?editors=0100 */
+  h1 {
+    font-size: 100px;
+  }
 
+  h2 {
+    font-size: 60px;
+  }
+
+}
    
