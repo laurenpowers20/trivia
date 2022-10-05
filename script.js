@@ -5,6 +5,7 @@ let gameQuestionText = document.getElementById("question-text");
 let answerButton = document.querySelectorAll(".answer-button");
 let answerMessage = document.querySelector(".answer-message");
 let scoreText = document.querySelector(".score");
+let title = document.querySelector(".title");
 let score = 0;
 
 startButton.addEventListener("click", startGame);
@@ -40,12 +41,76 @@ const triviaQuestions = [
       { text: "Alaska", correct: true },
     ],
   },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question: "What is the answer?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+    ],
+  },
 ];
 
 function startGame() {
   questionContainer.classList.remove("hide");
   startButton.classList.add("hide");
   nextButton.classList.remove("hide");
+  title.classList.add("hide");
   newQuestion();
 }
 
@@ -94,10 +159,6 @@ function newQuestion() {
   answerMessage.innerText = " ";
 }
 
-function getScore() {}
-//need correct keys to compare to true and false
-//not continue to next question if false.
-//
 function checkAnswer(e, questionBlock) {
   // console.log(questionBlock);
   // console.log(triviaQuestions);
@@ -106,16 +167,15 @@ function checkAnswer(e, questionBlock) {
   let userChoice = questionBlock.answers.find((choice) => {
     return choice.text === e.target.innerText;
   });
-  // console.log("user choice", userChoice);
 
   if (userChoice !== undefined) {
     if (userChoice.correct) {
       // console.log(userChoice);
       score += 10;
-      answerMessage.innerText = "Yay! You got it right!";
-      scoreText.innerText = score;
+      answerMessage.innerText = "Correct!";
+      scoreText.innerText = `Score:${score}/100`;
     } else {
-      answerMessage.innerText = "Sorry you're wrong :(";
+      answerMessage.innerText = "Sorry, that's incorrect 🚫";
     }
     index++;
   }
