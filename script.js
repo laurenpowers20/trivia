@@ -51,11 +51,29 @@ const triviaQuestions = [
     ],
   },
   {
-    question: "What is the answer?",
+    question: "Choose the number 1",
     answers: [
-      { text: "Yes", correct: true },
+      { text: "four", correct: false },
+      { text: "Six", correct: false },
+      { text: "One", correct: true },
+      { text: "Ten", correct: false },
+    ],
+  },
+  {
+    question: "What color is the sky?",
+    answers: [
+      { text: "Purple", correct: false },
+      { text: "Blue", correct: true },
+      { text: "Pink", correct: false },
+      { text: "Brown", correct: false },
+    ],
+  },
+  {
+    question: "What is tall?",
+    answers: [
+      { text: "Yes", correct: false },
       { text: "No", correct: false },
-      { text: "No", correct: false },
+      { text: "Giraffe", correct: true },
       { text: "No", correct: false },
     ],
   },
@@ -69,36 +87,18 @@ const triviaQuestions = [
     ],
   },
   {
-    question: "What is the answer?",
+    question: "Is this correct?",
     answers: [
+      { text: "No", correct: false },
+      { text: "No", correct: false },
+      { text: "No", correct: false },
       { text: "Yes", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
     ],
   },
   {
-    question: "What is the answer?",
+    question: "What has stripes?",
     answers: [
-      { text: "Yes", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-    ],
-  },
-  {
-    question: "What is the answer?",
-    answers: [
-      { text: "Yes", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-    ],
-  },
-  {
-    question: "What is the answer?",
-    answers: [
-      { text: "Yes", correct: true },
+      { text: "Tiger", correct: true },
       { text: "No", correct: false },
       { text: "No", correct: false },
       { text: "No", correct: false },
@@ -178,5 +178,12 @@ function checkAnswer(e, questionBlock) {
       answerMessage.innerText = "Sorry, that's incorrect 🚫";
     }
     index++;
+    console.log(index);
+    if (index > 9) {
+      scoreText.innerText = `Final Score: ${score}%!`;
+      questionContainer.classList.add("hide");
+    } else {
+      console.log("keep playing");
+    }
   }
 }
