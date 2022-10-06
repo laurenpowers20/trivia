@@ -145,12 +145,12 @@ https://www.lenastanley.com/2022/01/css-neon-button-neon-effect.html*/
 
 button {
   color: #1a0d54;
-  border: 3px solid rgb(248, 203, 197);
+  border: 3px solid rgb(243, 200, 194);
   border-radius:15px;
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
-  filter: drop-shadow(0 0 15px #c789b6) drop-shadow(0 0 30px #d695c5) contrast(1) brightness(1);
+  filter: drop-shadow(0 0 10px #c789b6) drop-shadow(0 0 5px #d695c5) contrast(1) brightness(1);
   transition: .5s;
   font-family: 'Montserrat', sans-serif;
 }
@@ -160,13 +160,11 @@ button:hover {
   color: #1a0d54;
   color: white;
   background-color: rgb(178, 117, 161);
-  filter: drop-shadow(0 0 20px rgb(255, 219, 214)eb1) contrast(2) brightness(2);
+  filter: drop-shadow(0 0 10px rgb(255, 219, 214)eb1) contrast(2) brightness(2);
 }
 
-/*--------------------------*/
-
 .answer-button {
-  margin: 10px;
+  margin: 30px;
   width: 250px;
 }
 

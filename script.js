@@ -52,57 +52,58 @@ const triviaQuestions = [
     ],
   },
   {
-    question: "Choose the number 1",
+    question: "What currency is used in Thailand?",
     answers: [
-      { text: "four", correct: false },
-      { text: "Six", correct: false },
-      { text: "One", correct: true },
-      { text: "Ten", correct: false },
+      { text: "Thai Dollars", correct: false },
+      { text: "Thai Kip", correct: false },
+      { text: "Thai Baht", correct: true },
+      { text: "Thai Dong", correct: false },
     ],
   },
   {
-    question: "What color is the sky?",
+    question: "Which of these South American countries are land locked?",
     answers: [
-      { text: "Purple", correct: false },
-      { text: "Blue", correct: true },
-      { text: "Pink", correct: false },
-      { text: "Brown", correct: false },
+      { text: "Ecuador", correct: false },
+      { text: "Paraguay", correct: true },
+      { text: "Peru", correct: false },
+      { text: "Colombia", correct: false },
     ],
   },
   {
-    question: "What is tall?",
+    question: "Who is Calvin Cordozar Broadus Jr?",
     answers: [
-      { text: "Mouse", correct: false },
-      { text: "No", correct: false },
-      { text: "Giraffe", correct: true },
-      { text: "No", correct: false },
+      { text: "Snoop Dogg", correct: true },
+      { text: "Nate Dogg", correct: false },
+      { text: "Ice Cube", correct: false },
+      { text: "Ol' Dirty Bastard", correct: false },
     ],
   },
   {
-    question: "What is the answer?",
+    question: "What is a baby hedgehog called?",
     answers: [
-      { text: "Yes", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
+      { text: "Hogwarts", correct: false },
+      { text: "Hoggle", correct: false },
+      { text: "Hoglet", correct: true },
+      { text: "Pup", correct: false },
     ],
   },
   {
-    question: "Is this correct?",
+    question:
+      "Who was the first woman ever inducted into the Rock and Roll Hall of Fame??",
     answers: [
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "Yes", correct: true },
+      { text: "Aretha Franklin", correct: true },
+      { text: "Stevie Nicks", correct: false },
+      { text: "Joan Jett", correct: false },
+      { text: "Alanis Morrisette", correct: false },
     ],
   },
   {
-    question: "What has stripes?",
+    question: "The Wu-Tang Clan recommends protecting which body part?",
     answers: [
-      { text: "Tiger", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
+      { text: "Your hair", correct: false },
+      { text: "Your face", correct: false },
+      { text: "Your behind", correct: false },
+      { text: "Your neck", correct: true },
     ],
   },
 ];
@@ -168,7 +169,7 @@ function checkAnswer(e, questionBlock) {
   });
   if (userChoice !== undefined) {
     if (userChoice.correct) {
-      console.log(userChoice);
+      //console.log(userChoice);
       score += 10;
       answerMessage.innerText = "Correct!";
       scoreText.innerText = `${score}%`;
@@ -176,8 +177,8 @@ function checkAnswer(e, questionBlock) {
       answerMessage.innerText = "Sorry, that's incorrect.";
     }
     index++;
-    console.log(index);
-    if (index >= 9) {
+    //console.log(index);
+    if (index >= 10) {
       finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");
