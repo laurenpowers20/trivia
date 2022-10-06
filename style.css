@@ -145,7 +145,7 @@ https://www.lenastanley.com/2022/01/css-neon-button-neon-effect.html*/
 
 button {
   color: #1a0d54;
-  border: 3px solid rgb(243, 200, 194);
+  border: 3px solid #1a0d54;
   border-radius:15px;
   padding: 10px 20px;
   font-size: 20px;

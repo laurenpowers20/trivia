@@ -169,21 +169,21 @@ function checkAnswer(e, questionBlock) {
   });
   if (userChoice !== undefined) {
     if (userChoice.correct) {
-      //console.log(userChoice);
       score += 10;
       answerMessage.innerText = "Correct!";
       scoreText.innerText = `${score}%`;
+    } else if (userChoice.correct === true) {
+      answerButton.style.backGroundColor = `green`;
     } else {
       answerMessage.innerText = "Sorry, that's incorrect.";
     }
     index++;
-    //console.log(index);
     if (index >= 10) {
       finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");
     } else {
-      //console.log("keep playing");
+      //console.log("keep going")
     }
   }
 }
