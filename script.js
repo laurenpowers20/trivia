@@ -176,8 +176,8 @@ function checkAnswer(e, questionBlock) {
       answerMessage.innerText = "Sorry, that's incorrect.";
     }
     index++;
-    // console.log(index);
-    if (index > 9) {
+    console.log(index);
+    if (index >= 9) {
       finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");

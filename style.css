@@ -54,6 +54,10 @@ h2 {
   margin: 10px;
 }
 
+#next-button {
+  margin-top: 50px;
+}
+
 .hide {
   display: none;
 }
@@ -70,7 +74,7 @@ div {
   font-size: 50px;
   color: rgb(255, 219, 214);
   font-family: "neon-tubes-2-regular", sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 
@@ -153,7 +157,6 @@ button {
 
 
 button:hover {
-  
   color: #1a0d54;
   color: white;
   background-color: rgb(178, 117, 161);
@@ -180,6 +183,20 @@ button:hover {
 
   h2 {
     font-size: 60px;
+  }
+
+  .score {
+    font-size: 20px;
+  }
+  #question-text {
+    font-size: 30px;
+    color: rgb(255, 219, 214);
+    margin-bottom: 10px;
+  }
+  .answer-button {
+    margin: 10px;
+    width: 250px;
+    height: 50px;
   }
 
 }
