@@ -25,12 +25,12 @@ const triviaQuestions = [
     ],
   },
   {
-    question: "What is 2 + 2?",
+    question: "Which of these planets has no moons?",
     answers: [
-      { text: "22", correct: false },
-      { text: "6", correct: false },
-      { text: "4", correct: true },
-      { text: "dunno", correct: false },
+      { text: "Jupiter", correct: false },
+      { text: "Mars", correct: false },
+      { text: "Saturn", correct: false },
+      { text: "Mercury", correct: true },
     ],
   },
   {
@@ -43,12 +43,12 @@ const triviaQuestions = [
     ],
   },
   {
-    question: "What is the answer?",
+    question: "Which of these countries is an enclave?",
     answers: [
-      { text: "Yes", correct: true },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
-      { text: "No", correct: false },
+      { text: "Lesotho", correct: true },
+      { text: "Monaco", correct: false },
+      { text: "Singapore", correct: false },
+      { text: "Laos", correct: false },
     ],
   },
   {
@@ -72,7 +72,7 @@ const triviaQuestions = [
   {
     question: "What is tall?",
     answers: [
-      { text: "Yes", correct: false },
+      { text: "Mouse", correct: false },
       { text: "No", correct: false },
       { text: "Giraffe", correct: true },
       { text: "No", correct: false },
