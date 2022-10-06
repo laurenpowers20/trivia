@@ -167,16 +167,17 @@ function checkAnswer(e, questionBlock) {
   let userChoice = questionBlock.answers.find((choice) => {
     return choice.text === e.target.innerText;
   });
+
   if (userChoice !== undefined) {
     if (userChoice.correct) {
       score += 10;
       answerMessage.innerText = "Correct!";
       scoreText.innerText = `${score}%`;
     } else {
-      answerMessage.innerText = "Sorry, that's incorrect.";
+      answerMessage.innerText = `Sorry, that's incorrect.`;
     }
     index++;
-    if (index >= 11) {
+    if (index >= 10) {
       finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");
