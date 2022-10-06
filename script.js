@@ -172,13 +172,11 @@ function checkAnswer(e, questionBlock) {
       score += 10;
       answerMessage.innerText = "Correct!";
       scoreText.innerText = `${score}%`;
-    } else if (userChoice.correct === true) {
-      answerButton.style.backGroundColor = `green`;
     } else {
       answerMessage.innerText = "Sorry, that's incorrect.";
     }
     index++;
-    if (index >= 10) {
+    if (index >= 11) {
       finalScore.innerText = `Final Score: ${score}%!`;
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");

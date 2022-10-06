@@ -145,7 +145,7 @@ https://www.lenastanley.com/2022/01/css-neon-button-neon-effect.html*/
 
 button {
   color: #1a0d54;
-  border: 3px solid #1a0d54;
+  border: 1px solid #1a0d54;
   border-radius:15px;
   padding: 10px 20px;
   font-size: 20px;
@@ -157,9 +157,9 @@ button {
 
 
 button:hover {
-  color: #1a0d54;
+  color: #422f53;
   color: white;
-  background-color: rgb(178, 117, 161);
+  background-color: rgb(26, 9, 101);
   filter: drop-shadow(0 0 10px rgb(255, 219, 214)eb1) contrast(2) brightness(2);
 }
 
