@@ -17,6 +17,13 @@ body{
   background-size:cover;
 }
 
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 50px;
+}
 
 .title {
   position: fixed;
@@ -29,6 +36,8 @@ body{
   text-align: right;
   padding: 20px;
   margin-right: 20px;
+  font-family: "neon-tubes-2-regular";
+  font-size: 50px;
 }
 
 #game-container {
@@ -36,6 +45,9 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.answer-message {
+  font-family: 'Montserrat', sans-serif;
 }
 
 #start-button{
@@ -58,14 +70,9 @@ div {
   font-size: 50px;
   color: rgb(255, 219, 214);
   font-family: "neon-tubes-2-regular", sans-serif;
+  margin-bottom: 10px;
 }
 
-.answer-button {
-  margin: 10px;
-  width: 250px;
-  height: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .final-score {
   font-size: 50px;
@@ -73,7 +80,8 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  font-family: "neon-tubes-2-regular", sans-serif;
+  color: rgb(255, 219, 214);
 }
 
 /*
@@ -128,63 +136,42 @@ Source: https://https://codepen.io/nodws/pen/WNjXbr?editors=1100
     text-shadow: inherit;
   }
 }
+/* Botton Effect
+https://www.lenastanley.com/2022/01/css-neon-button-neon-effect.html*/
 
-
-
-/*:root {
-  --neon-text-color: #f40;
-}*/
-
-h1 {
-  font-size: 150px;
+button {
+  color: #1a0d54;
+  border: 3px solid rgb(248, 203, 197);
+  border-radius:15px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 15px #c789b6) drop-shadow(0 0 30px #d695c5) contrast(1) brightness(1);
+  transition: .5s;
+  font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
-  font-size: 50px;
+
+button:hover {
+  
+  color: #1a0d54;
+  color: white;
+  background-color: rgb(178, 117, 161);
+  filter: drop-shadow(0 0 20px rgb(255, 219, 214)eb1) contrast(2) brightness(2);
 }
 
+/*--------------------------*/
 
-
-
-/*
-Neon Light Effect
-Source: https://codepen.io/Trinca/pen/NrvpWa?editors=0100 
-*/
-/*
-:root {
-  --neon-text-color: #f40;
+.answer-button {
+  margin: 10px;
+  width: 250px;
 }
 
-h1 {
-  font-size: 150px;
+.next-button {
+ padding: 5px;
 }
 
-h2 {
-  font-size: 50px;
-}
-.title {
-  color: #FB4264;
-  text-shadow: 0 0 3vw #F40A35;   
-  animation: neon 1s ease infinite;
-  -moz-animation: neon 2s ease infinite;
-  -webkit-animation: neon 2s ease infinite;
-  font-family: "neon-tubes-2-regular", sans-serif;
-}
-
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
-  }
-}
-*/
-
-
+  
 @media only screen and (max-width: 600px) {
 
   h1 {

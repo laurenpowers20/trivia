@@ -116,9 +116,7 @@ function startGame() {
 }
 
 function newQuestion() {
-  // Add question
   gameQuestionText.innerText = triviaQuestions[index].question;
-  // Add choices
   let choiceA = document.querySelector(".A");
   let choiceB = document.querySelector(".B");
   let choiceC = document.querySelector(".C");
@@ -168,13 +166,12 @@ function checkAnswer(e, questionBlock) {
   let userChoice = questionBlock.answers.find((choice) => {
     return choice.text === e.target.innerText;
   });
-
   if (userChoice !== undefined) {
     if (userChoice.correct) {
       console.log(userChoice);
       score += 10;
       answerMessage.innerText = "Correct!";
-      scoreText.innerText = `${score} points`;
+      scoreText.innerText = `${score}%`;
     } else {
       answerMessage.innerText = "Sorry, that's incorrect.";
     }
