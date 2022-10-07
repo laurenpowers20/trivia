@@ -48,6 +48,8 @@ h2 {
 }
 .answer-message {
   font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding: 30px;
 }
 
 #start-button{
@@ -167,9 +169,7 @@ button:hover {
  
 }
 
-.next-button {
- padding: 5px;
-}
+
 
   
 @media only screen and (max-width: 600px) {
@@ -186,15 +186,38 @@ button:hover {
     font-size: 20px;
   }
   #question-text {
-    font-size: 30px;
+    font-size: 22px;
     color: rgb(255, 219, 214);
     margin-bottom: 10px;
   }
+
+  .answer-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  
   .answer-button {
     margin: 10px;
-    width: 250px;
+    width: 210px;
     height: 50px;
+    font-size: 15px;
+  }
+  #next-button {
+    margin-top: 30px;
+    height: 45px;
   }
 
+  button {
+    color: #1a0d54;
+    border: 2px solid #1a0d54;
+    border-radius:15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #c789b6) drop-shadow(0 0 5px #d695c5) contrast(1) brightness(1);
+    transition: .5s;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
    

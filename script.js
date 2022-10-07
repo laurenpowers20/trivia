@@ -161,14 +161,9 @@ function newQuestion() {
 }
 
 function checkAnswer(e, questionBlock) {
-  // console.log(questionBlock);
-  // console.log(triviaQuestions);
-  //console.log(e.target.innerText);
-  //console.log(questionBlock);
   let userChoice = questionBlock.answers.find((choice) => {
     return choice.text === e.target.innerText;
   });
-
   if (userChoice !== undefined) {
     if (userChoice.correct) {
       score += 10;
@@ -179,7 +174,6 @@ function checkAnswer(e, questionBlock) {
         ({ correct }) => correct == true
       );
       answerMessage.innerText = `Sorry! The answer is ${correctAnswer.text}`;
-      console.log(correctAnswer);
     }
     index++;
     if (index >= 10) {
