@@ -7,6 +7,7 @@ let answerMessage = document.querySelector(".answer-message");
 let scoreText = document.querySelector(".score");
 let finalScore = document.querySelector(".final-score");
 let title = document.querySelector(".title");
+let newGame = document.querySelector(".new-game");
 let score = 0;
 
 startButton.addEventListener("click", startGame);
@@ -174,7 +175,11 @@ function checkAnswer(e, questionBlock) {
       answerMessage.innerText = "Correct!";
       scoreText.innerText = `${score}%`;
     } else {
-      answerMessage.innerText = `Sorry, that's incorrect.`;
+      let correctAnswer = triviaQuestions[index].answers.find(
+        ({ correct }) => correct == true
+      );
+      answerMessage.innerText = `Sorry! The answer is ${correctAnswer.text}`;
+      console.log(correctAnswer);
     }
     index++;
     if (index >= 10) {
@@ -182,7 +187,7 @@ function checkAnswer(e, questionBlock) {
       questionContainer.classList.add("hide");
       scoreText.classList.add("hide");
     } else {
-      //console.log("keep going")
+      //console.log("keep going");
     }
   }
 }
