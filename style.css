@@ -215,7 +215,7 @@ button:hover {
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
-    filter: drop-shadow(0 0 5px #c789b6) drop-shadow(0 0 5px #d695c5) contrast(1) brightness(1);
+    filter: drop-shadow(0 0 5px #c789b69b) drop-shadow(0 0 5px #d695c59a) contrast(1) brightness(1);
     transition: .5s;
     font-family: 'Montserrat', sans-serif;
   }
