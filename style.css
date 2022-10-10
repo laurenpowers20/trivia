@@ -185,8 +185,9 @@ button:hover {
   .score {
     font-size: 20px;
   }
+
   #question-text {
-    font-size: 22px;
+    font-size: 26px;
     color: rgb(255, 219, 214);
     margin-bottom: 10px;
   }
@@ -219,5 +220,6 @@ button:hover {
     transition: .5s;
     font-family: 'Montserrat', sans-serif;
   }
+  
 }
    
