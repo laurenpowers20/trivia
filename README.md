@@ -1,6 +1,6 @@
 # Game of Triva
 
-- This project is a mulitple choice game of trivia written in HTML, CSS, and JavaScript.
+- This project is a multiple choice game of trivia written in HTML, CSS, and JavaScript.
 
 - The user will select an answer out of four choices. There are 10 questions, each are worth 10 points.
 
