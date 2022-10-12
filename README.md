@@ -4,6 +4,8 @@
 
 - The user will select an answer out of four choices. There are 10 questions, each are worth 10 points.
 
+- [Play Trivia!](https://preeminent-douhua-b0a8d5.netlify.app/)
+
 References:
 
 - [Neon Light Effect](https://codepen.io/nodws/pen/WNjXbr?editors=0110)
