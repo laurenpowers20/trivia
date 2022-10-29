@@ -4,7 +4,7 @@
 
 - The user will select an answer out of four choices. There are 10 questions, each are worth 10 points.
 
-- [Play Trivia!](https://preeminent-douhua-b0a8d5.netlify.app/)
+- [Play Trivia!](https://triviagame1022.netlify.app/)
 
 References:
 
