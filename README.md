@@ -1,10 +1,15 @@
 # Game of Triva
 
-- This project is a multiple choice game of trivia written in HTML, CSS, and JavaScript.
+[Live Site](https://triviagame1022.netlify.app/)
 
-- The user will select an answer out of four choices. There are 10 questions, each are worth 10 points.
+## Languages, Skills, and Methods Utilized
 
-- [Play Trivia!](https://triviagame1022.netlify.app/)
+- Vanilla JavaScript, HTML, and CSS
+- Object-oriented Design and Programming
+- Array data structures and methods
+- Event Listeners and Handlers
+
+This project is a multiple choice game of trivia written in HTML, CSS, and JavaScript. The user will select an answer out of four choices. There are 10 questions, each are worth 10 points.
 
 References:
 
